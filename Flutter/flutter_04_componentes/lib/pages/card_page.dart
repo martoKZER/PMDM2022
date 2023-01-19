@@ -13,12 +13,42 @@ class Card_Page extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.indigo,
-          title: const Text('Card 1 Page'),
-          elevation: 0,
-        ),
-        body: Center(
-          child: Text('Card Page')));
+      appBar: AppBar(
+        title: const Text('Cards - Tarjetas'),
+        elevation: 0,
+      ),  
+      body: ListView(
+        padding : const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+        children : const [
+          Card(
+            child: ListTile(
+              leading: Icon(Icons.photo_album_outlined),
+              title: Text('Soy un titulo'),
+              subtitle: Text(''),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(
+                  onPressed: (){},
+                  child: const Text('OK'),
+                ),
+                TextButton(
+                  onPressed: () {},
+                  child: const Text('Con esta me cancela')
+                ),
+
+              ],
+              )
+          )
+        ],
+      )
+    );
   }
+}
+
+class TarjetaPersonalizada1 extends StatelessWidget{
+  const TarjetaPersonalizada1({
+    Key? key,
+  }):super(key: key);
 }
