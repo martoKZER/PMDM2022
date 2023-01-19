@@ -18,7 +18,7 @@ class Alert_Page extends StatelessWidget {
           title: const Text('Alert Page'),
           elevation: 0,
         ),
-        body: Center(
+        body: const Center(
           child: Text('Alert Page')));
   }
 }

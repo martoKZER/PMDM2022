@@ -8,9 +8,9 @@ class Home_Page extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.indigo,
+          
           title: const Text('Flutter componentes'),
-          elevation: 0,
+         
         ),
         body: ListView(children: [
           ListTile(
@@ -18,6 +18,27 @@ class Home_Page extends StatelessWidget {
             leading: Icon(Icons.account_balance_wallet),
             trailing: Icon(Icons.keyboard_arrow_right),
             onTap: () => Navigator.pushNamed(context, 'lista1'),
+          ),
+          const Divider(),
+          ListTile(
+            title : Text('Listas de tipo 2'),
+            leading: Icon(Icons.account_balance_wallet),
+            trailing: Icon(Icons.keyboard_arrow_right),
+            onTap: () => Navigator.pushNamed(context, 'lista2'),
+          ),
+          const Divider(),
+          ListTile(
+            title : Text('Alerts - Alertas'),
+            leading: Icon(Icons.account_balance_wallet),
+            trailing: Icon(Icons.keyboard_arrow_right),
+            onTap: () => Navigator.pushNamed(context, 'alert'),
+          ),
+          const Divider(),
+          ListTile(
+            title : Text('Cards - Tarjetas'),
+            leading: Icon(Icons.account_balance_wallet),
+            trailing: Icon(Icons.keyboard_arrow_right),
+            onTap: () => Navigator.pushNamed(context, 'card'),
           ),
           const Divider(),
         ],
