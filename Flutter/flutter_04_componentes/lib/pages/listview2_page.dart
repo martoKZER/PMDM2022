@@ -2,12 +2,28 @@ import 'package:flutter/material.dart';
 
 class list_view_2_page extends StatelessWidget {
   list_view_2_page({super.key});
+
   final opciones = [
     'Batman',
     'Superman',
-    'Xavi Hernandez',
-    'Luis Padrique',       
-    'Messi'
+    'Super agente Loras',
+    'Spiderman',
+    'La Xavineta',
+    'Batman',
+    'Superman',
+    'Super agente Loras',
+    'Spiderman',
+    'La Xavineta',
+    'Batman',
+    'Superman',
+    'Super agente Loras',
+    'Spiderman',
+    'La Xavineta',
+    'Batman',
+    'Superman',
+    'Super agente Loras',
+    'Spiderman',
+    'La Xavineta',
   ];
 
   @override
@@ -15,25 +31,30 @@ class list_view_2_page extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.indigo,
-          title: const Text('Tipo Lista 1 Page'),
+          title: const Text('Tipo Lista 2 Page'),
           elevation: 0,
         ),
         body: ListView.separated(
           itemCount: opciones.length,
           itemBuilder: ((context, i) {
             return ListTile(
-              leading: const Icon(Icons.child_care, color: Colors.indigo,),
+              leading: const Icon(
+                Icons.child_care,
+                color: Colors.indigo,
+              ),
               title: Text(opciones[i]),
               subtitle: Text(opciones[i]),
-              trailing: const Icon(Icons.arrow_forward_ios, color: Colors.indigo,),
+              trailing: const Icon(
+                Icons.arrow_forward_ios_outlined,
+                color: Colors.indigo,
+              ),
               onTap: () {
                 final superheroe = opciones[i];
                 print(superheroe);
               },
             );
-          }), 
-          separatorBuilder: ((_, __) => const Divider()), 
-          )
-      );
+          }),
+          separatorBuilder: ((_, __) => const Divider()),
+        ));
   }
 }
